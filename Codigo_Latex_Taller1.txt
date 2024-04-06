@@ -1,0 +1,359 @@
+\documentclass[conference]{IEEEtran}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[spanish, es-tabla]{babel}
+\usepackage{array}
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\graphicspath{images3P}
+\graphicspath{images4P}
+\usepackage{url}
+
+% Title and author info
+\title{Reporte Profiling}
+\author{\IEEEauthorblockN{\textbf{Javier Eduardo Barreto Rojas}}}
+
+\begin{document}
+\maketitle
+
+
+\section{\textbf{Introduccion}}
+
+Mediante el presente documento se muestra un analisis computacional, en donde se analizan distintos tipos de datos en varios lenguajes.
+
+Luego se realiza un analisis mucho mas especifico sobre el tipo de dato array de mutabilidad e inmutabilidad. A continuacion se realizo un analisis de la complejidad computacional de distintos algoritmos, en lenguaje de programacion python.
+
+Ademas, se muestra un analisis profiling y graficacion de estos algoritmos, final y nuevamente se presento un analisis profiling mediante el lenguaje de programacion java, esto junto con su tiempo de ejecucion.
+
+\section{\textbf{Tipos de datos mutables e inmutables}}
+
+
+\begin{table}[h]
+\large
+\centering
+\begin{tabular}{|c|p{3cm} | p{3cm}|}
+\hline
+
+\textbf{Lenguaje} & \textbf{Mutables} & \textbf{Inmutables}\\
+
+\hline
+\textbf{Python} & Listas, diccionarios, conjuntos & Tuplas, cadenas de texto, números inmutables (int, float) \\
+
+\hline
+\textbf{Golang}  & Slices, mapas & Arrays, strings \\
+\hline
+\textbf{Java} & ArrayList, HashMap & Arrays, Strings, objetos inmutables (como Integer) \\
+\hline
+\textbf{C++} & Vectores, mapas (std::map o std::unordered\_map) & Arrays, strings \\
+\hline
+\end{tabular}
+
+\hline
+\caption{\textbf{
+Datos mutables e inmutables en varios lenguajes de programación.}}
+\label{tab:datos_mutables_inmutables}
+\end{table}
+
+
+\section{\textbf{Arrays: Mutables o inmutables}}
+
+\subsection{\textbf{Python (Mutable)}}
+
+\textbf{En python}, los arrays normalmente son usados para crear listas, lo que significa que pueden cambiar su contenido despues de haber sido creadas, esto se debe a que se pueden agregar o eliminar elementos de dichas listas.
+
+
+\vspace{1cm}
+\includegraphics[scale=0.4]{Images3P/1_Python.jpg}
+
+\subsection{\textbf{Golang (Mutable)}}
+
+\textbf{En Golang}, los arrays son mutables. Esto significa que el tamaño y los elementos de un array pueden modificarse después de su creación.
+
+\vspace{1cm}
+\includegraphics[scale=0.4]{Images3P/1_Golang.jpg}
+
+\subsection{\textbf{Java (Inmutable)}}
+
+\textbf{En Java}, los arrays son inmutables en el sentido de que su tamaño no puede cambiar después de su creación. Sin embargo, los elementos individuales del array pueden modificarse.
+
+
+\vspace{1cm}
+\includegraphics[scale=0.4]{Images3P/1_Java.jpg}
+
+\subsubsection{\textbf{C++(Mutable)}} 
+
+\textbf{En C++}, los arrays son mutables. Puedes modificar tanto el tamaño del array como sus elementos después de la creación.
+
+\vspace{1cm}
+\includegraphics[scale=0.4]{Images3P/1_C++.jpg}
+
+\section{\textbf{Complejidad computacional}}
+
+\subsection{\textbf{Analisis de Algoritmos: }}
+
+
+\textbf{Algoritmo 1 :}
+Segun el analisis realizado al primer algoritmo, se pudo evidenciar de que la complejidad temporal (Tiempo de ejecucion) de este algoritmo es de tipo constante
+
+\vspace{1cm}
+\includegraphics[scale=0.6]{Images4P/1_Algoritmo.jpg}
+
+
+\vspace{1cm}
+\textbf{Algoritmo 2 :}
+Se pudo evidenciar de que la complejidad temporal (Tiempo de ejecucion) es de tipo cuadratica, esto debido a que mediante una estructura ciclica repetitiva tipo "for" se recorre una lista de rango "n", para numero de filas "i" y columnas "j", agregados a una variable diccionario tipo pares
+
+\vspace{1cm}
+\includegraphics[scale=0.5]{Images4P/2_Algoritmo.jpg}
+
+
+\textbf{Algoritmo 3 :}
+Para este algoritmo se determino que hay una complejidad de tipo logaritrmica, debido a que a travez de una estructura ciclica "for" se estan realizando varias operaciones en memoria de ordenamiento de datos en un diccionario
+
+\vspace{1cm}
+\includegraphics[scale=0.3]{Images4P/3_Algoritmo.jpg}
+
+
+\textbf{Algoritmo 4 :}
+Para este algoritmo se determino una complejidad de tipo constante ya que se realiza una busqueda con algun par de posiciones en el array de "busqueda" de la variable indice
+
+\vspace{1cm}
+\includegraphics[scale=0.5]{Images4P/4_Algoritmo.jpg}
+
+\textbf{Algoritmo 5 :}
+Aqui, en este algoritmo se determino una complejidad de tipo cuadratica, esto porque en la sintaxis del mismo, primero, se realizo una anidacion de dos estructuras ciclicas repetitivas tipo "for", luego se inicializa un diccionario vacio, para asi en la segunda estructura, copiar y modificar este diccionario
+
+\vspace{1cm}
+\includegraphics[height=6cm, width=9cm]{Images4P/5_Algoritmo.jpg}
+
+
+\section{Analisis profiling y graficacion}
+
+A continuacion, se presenta mediante un analisis profiling y diversos graficos el tiempo y coste de ejecucion de algunos algoritmos
+
+
+% Aqui va el analisis profiling de los algoritmos presentados en el taller sobre el analisis profiling y graficacion python/Java
+
+
+\vspace{1cm}
+\textbf{Algoritmo 1}
+Para este algoritmo se determino una complejidad computacional en tiempo constante, esto debido a que el analisis realizado al grafico y la sintaxis del codigo, nos dice que el costo de memoria con respecto al tiempo en segundos, escala de forma constante dependiendo de la entrada en la lista
+
+\vspace{1cm}
+
+% Analisis
+\includegraphics[scale=0.7]{Images5P/Algoritmo 1/Primer_Analisis.png}
+
+% Grafico
+\vspace{1cm}
+\includegraphics[scale=0.4]{Images5P/Algoritmo 1/Grafico.png}
+
+\vspace{1cm}
+\textbf{Algoritmo 2}
+Para este algoritmo se determino una complejidad computacional en tiempo cuadratico, esto debido a que alli, en la sintaxis del codigo se demuestra de que la lista "el array" crece con respecto a la entrada
+
+\vspace{1cm}
+
+% Analisis
+\includegraphics[height=6cm, width=9.9cm]{Images5P/Algoritmo 2/Primer_Analisis.png}
+
+% Grafico
+\includegraphics[scale=0.3]{Images5P/Algoritmo 2/Grafico.png}
+
+\vspace{1cm}
+\textbf{Algoritmo 3}
+En este algoritmo se determino una complejidad computacional en tiempo lineal. 
+\vspace{1cm}
+En primer lugar en la sintaxis el algoritmo se usan tipos de datos mutables, en este caso, la lista, ya que esta es dinamica, luego se tiene en cuenta de que n es igual a 500000 datos, la cual recibe la lista y por este hecho de que la lista va crecer en memoria con respecto a la entrada, nos indica una complejidad lineal, por otro lado, teniendo en cuenta la CPU, aqui a travez de rango se realiza un computo de una variable inmutable, sin embargo, se contrasta de que al final se utiliza un main, en donde, nuevamente mediante una estructura ciclica de tipo "for" se define una entrada o parametro constante, lo que nos muestra otra complejidad en esta sintaxis.
+
+\vspace{1cm}
+
+% Para cada uno de los picos, es decir, de las imagenes colocadas abajo, realizar el respectivo analisis computacional %
+
+% Analisis
+% Pico 1
+\subsection{Pico 1}
+\includegraphics[scale=0.5]{Images5P/Algoritmo 3/Pico_1.png}
+
+\vspace{1cm}
+% Pico 2
+\subsection{Pico 2}
+\includegraphics[scale=0.5]{Images5P/Algoritmo 3/Pico_2.png}
+
+\vspace{1cm}
+% Pico 3
+\subsection{Pico 3}
+\includegraphics[scale=0.5]{Images5P/Algoritmo 3/Pico_3.png}
+
+\vspace{1cm}
+% Pico 4
+\subsection{Pico 4}
+\includegraphics[scale=0.5]{Images5P/Algoritmo 3/Pico_4.png}
+
+\vspace{1cm}
+% Pico 5
+\subsection{Pico 5}
+\includegraphics[scale=0.5]{Images5P/Algoritmo 3/Pico_5.png}
+
+% ·············· %
+
+
+\vspace{1cm}
+% Grafico
+\includegraphics[scale=0.3]{Images5P/Algoritmo 3/Grafico.png}
+
+\vspace{1cm}
+\textbf{Algoritmo 4}
+A este algoritmo no se le fue posible efectuar una operacion de analisis profiling y graficacion
+
+\vspace{1cm}
+\textbf{Algoritmo 5}
+A este algoritmo no se le fue posible efectuar una operacion de analisis profiling y graficacion
+
+
+\section{\textbf{Algoritmos en Java}}
+
+% Se colocaron las imagenes de los algoritmos de python en java % IGUALMENTE REVISAR
+
+Ahora, bajo el mismo enfoque que en el punto anterior, se presenta, pero desde la perspectiva del lenguaje de programacion Java
+
+%los mismos algoritmos de puntos pasados deben de realizarse mediante el lenguaje de programacion Java
+
+\vspace{1cm}
+{\textbf{Algoritmo 1}}
+\vspace{1cm}
+
+% Analisis
+% Boceto del analisis
+El algoritmo, en tiempo de ejecucion, tiene un coste maximo y constante de 100Mb en memoria durante su tiempo de ejecucion, esto queriendo dar a entender que su coste en memoria no aumentara sin importar su tiempo de ejecucion, ya que su complejidad  temporal y espacial es de tipo constante, su coste temporal es constante entre los 189 y 200 (ms)
+
+
+% Codigo y profiling
+
+% Codigo
+\vspace{1cm}
+\includegraphics[scale=0.9]{Images6P/Algoritmo 1/Algoritmo_1.png}
+
+
+% Profiling
+\includegraphics[scale=0.5]{Images6P/Algoritmo 1/Telemetria_Algoritmo1.png}
+
+
+\includegraphics[scale=0.4]{Images6P/Algoritmo 1/Telemetria_Algoritmo1 - copia.png}
+
+\vspace{1cm}
+\includegraphics[scale=0.5]{Images6P/Algoritmo 1/Tiempo(ms)_Algoritmo1.png}
+
+% ·················· %
+
+\vspace{1cm}
+\textbf{Algoritmo 2}
+\vspace{1cm}
+
+% Analisis
+El algoritmo, en tiempo de ejecucion e igualmente que en el anterior algoritmo tiene un coste de 100Mb de memoria, por el contrario al tratarse de una conplejidad temporal cuadratica, esto por la anidacion de dos estructuras ciclicas de tipo "for"
+
+% Codigo y profiling
+
+% Codigo
+\vspace{1cm}
+\includegraphics[scale=0.5]{Images6P/Algoritmo 2/Algoritmo_2.png}
+
+% Profiling
+\vspace{1cm}
+\includegraphics[scale=0.5]{Images6P/Algoritmo 2/Telemetria_Algoritmo2 - copia.png}
+
+\vspace{1cm}
+\includegraphics[scale=0.5]{Images6P/Algoritmo 2/Telemetria_Algoritmo2.png}
+
+\vspace{1cm}
+\includegraphics[scale=0.5]{Images6P/Algoritmo 2/Tiempo(ms)_Algoritmo2.png}
+
+% ················· %
+
+\vspace{1cm}
+\textbf{Algoritmo 3}
+\vspace{1cm}
+
+% Analisis
+El algoritmo, en tiempo de ejecucion tiene un coste de CPU minimo, sin embargo el tiempo total de ejecucion es en promedio de 178 (ms), en terminos de complejidad computacional, se determino una complejidad temporal en tiempo  lineal, hecho que en el grafico en python se reprepp
+
+% Codigo y profiling
+
+% Codigo
+\vspace{1cm}
+\includegraphics[scale=0.6]{Images6P/Algoritmo 3/Algoritmo_3.png}
+
+ % Profiling
+
+\vspace{1cm}
+\includegraphics[scale=0.5]{Images6P/Algoritmo 3/Telemetria_Algoritmo3 - copia.png}
+
+\vspace{1cm}
+\includegraphics[scale=0.3]{Images6P/Algoritmo 3/Tiempo(ms)_Algoritmo3.png}
+
+% ·················· %
+\vspace{1cm}
+\textbf{Algoritmo 4}
+
+% Analisis
+
+El algoritmo, segun el analisis profiling realizado, nos muestra un tiempo de ejecucion cercano a 306 (ms), lo cual para una complejidad logaritmica como la que tiene este algoritmo es eficiente, sin embargo a travez del grafico retornado por memoria, nos indica que su complejidad espacial es de tiempo constante, esto ya que en medio de la sintaxis del algoritmo se hacen uso de algunas variables locales las cuales ocupan un espacio adicional en memoria
+ 
+% Cosigo y profiling
+
+% Codigo
+
+\vspace{1cm}
+\includegraphics[scale=0.6]{Images6P/Algoritmo 4/Algoritmo_4.png}
+
+% Profiling
+
+\vspace{1cm}
+\includegraphics[scale=0.6]{Images6P/Algoritmo 4/Telemetria_Algoritmo4 - copia.png}
+
+\vspace{1cm}
+\includegraphics[scale=0.6]{Images6P/Algoritmo 4/Telemetria_Algoritmo4.png}
+
+\vspace{1cm}
+\includegraphics[scale=0.6]{Images6P/Algoritmo 4/Tiempo(ms)_Algoritmo4.png}
+
+% ·················· %
+
+
+\vspace{1cm}
+\textbf{Algoritmo 5}
+\vspace{1cm}
+
+
+% Analisis
+Finalmente, para este algoritmo se pudo evidenciar mediante un analisis profiling de metodos, un tiempo de ejecucion cercano a los 200 (ms), luego teniendo en cuenta la sintaxis del codigo, se pudo determinar una complejidad espacial en tiempo exponencial 
+
+% Codigo  y profiling
+
+% Codigo
+\vspace{1cm}
+\includegraphics[scale=0.6]{Images6P/Algoritmo 5/Algoritmo_5.png}
+
+% Profiling
+
+\vspace{1cm}
+\includegraphics[scale=0.6]{Images6P/Algoritmo 5/Telemetria_Algoritmo5 - copia.png}
+
+\vspace{1cm}
+\includegraphics[scale=0.6]{Images6P/Algoritmo 5/Telemetria_Algoritmo5 - copia.png}
+
+\vspace{1cm}
+\includegraphics[scale=0.6]{Images6P/Algoritmo 5/Tiempo(ms)_Algoritmo5.png}
+
+% ·················· %
+
+\vspace{1cm}
+\bibliographystyle{IEEEtran}
+\bibliography{sample}
+
+\includegraphics[scale=0.6]{ImagesRef/Referencias.png}
+
+\end{document}
